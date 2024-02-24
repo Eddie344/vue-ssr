@@ -17,3 +17,5 @@ yarn preview
 
 # Todo
 - [x] Integrate Vue Router
+- [ ] Integrate [Unhead](https://unhead.unjs.io/)
+- [ ] Intagrate [Tanstack Query](https://tanstack.com/query/latest/docs/framework/vue/overview)

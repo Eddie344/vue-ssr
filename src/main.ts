@@ -1,4 +1,6 @@
 import { createSSRApp } from 'vue';
+import i18next from 'i18next';
+import I18NextVue from 'i18next-vue';
 import App from './App.vue';
 import router from './router';
 
@@ -7,7 +9,25 @@ import router from './router';
 // fresh store here.
 export function createApp() {
   const app = createSSRApp(App);
+
   app.use(router);
+
+  i18next.init({
+    lng: 'en',
+    interpolation: {
+      escapeValue: false,
+    },
+    resources: {
+      en: {
+        translation: {
+          hello: 'hello world',
+          foo: 'bar',
+        },
+      },
+    },
+  });
+
+  app.use(I18NextVue, { i18next });
 
   return { app, router };
 }

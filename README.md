@@ -1,5 +1,5 @@
 # Vue SSR
-THis project creeated for learning how to create SSR app using Vue and Vite
+This project created for learning how to create SSR app using Vue and Vite
 
 ```bash
 # Install dependencies
